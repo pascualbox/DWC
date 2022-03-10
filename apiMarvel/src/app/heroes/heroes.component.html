@@ -1,0 +1,27 @@
+<div >
+<h2>My Heroes</h2>
+
+<p>
+  <label for="new-hero">Hero name: </label>
+  <input id="new-hero" #heroName />
+</p>
+
+<br>
+<button (click)="goFirst()">Primera página</button>
+<button (click)="previousPage()">Anterior</button>
+<select name="size" [(ngModel)]="size">
+  <option selected value="5">5</option>
+  <option value="10">10</option> 
+  <option value="15">15</option>
+  <option value="20">20</option> 
+</select>
+<button (click)="search()">Buscar</button>
+<button (click)="nextPage()">Siguiente</button>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+  </li>
+</ul>
+</div>

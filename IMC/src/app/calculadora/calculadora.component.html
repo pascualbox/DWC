@@ -1,0 +1,37 @@
+<div id="mainDiv">
+
+<form action="">
+  <h1 class="label">CALCULADORA</h1>
+  <input [(ngModel)]="nombre" placeholder="Inserta tu nombre" (keyup)="onKey($event)">
+
+  <div id="radio-sexo" class="espacio-top">
+    <input type="radio" id="hombre" name="sexo" value="hombre" [(ngModel)]="sexo" [checked]="true">
+    <label for="hombre" class="label">Hombre</label><br>
+    <input type="radio" id="mujer" name="sexo" value="mujer" [(ngModel)]="sexo" [checked]="true">
+    <label for="mujer" class="label">Mujer</label><br>
+  </div>
+
+  <div id="peso" class="espacio-top">
+    <div class="espacio-bot" class="label">Peso</div>
+    <button (click)="valores(-5, true)" (click)="calcularImc()" class="btn-cambio">-5</button>   
+    <button (click)="valores(-1, true)" class="btn-cambio">-1</button>
+    <input type="text" placeholder="Peso" id="peso-input" value="{{peso}}" class="espacio-left" [(ngModel)]="peso" readonly>
+    <button (click)="valores(+1, true)"  class="btn-cambio">+1</button>
+    <button (click)="valores(+5, true)"  class="btn-cambio">+5</button>
+  </div>
+
+  <div id="altura" class="espacio-top">
+    <div class="espacio-bot" class="label">Altura</div>
+    <button (click)="valores(-5, false)" class="btn-cambio">-5</button>
+    <button (click)="valores(-1, false)"  class="btn-cambio">-1</button>
+    <input type="text" placeholder="Altura" id="altura-input" value="{{altura}}" class="espacio-left" [(ngModel)]="altura" readonly>
+    <button (click)="valores(+1, false)"  class="btn-cambio">+1</button>
+    <button (click)="valores(+5, false)"  class="btn-cambio">+5</button>
+  </div>
+  <h3 class="imc">{{usuario.getIndice()}}</h3>
+  <button type="button" (click)="calcular()" class="espacio-top">Calcular</button>
+
+  <input type="reset" value="Volver a empezar" (click)="reset()">
+</form>
+</div>
+

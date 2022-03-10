@@ -1,0 +1,11 @@
+<div>
+<h2>Historial</h2>
+
+<ul *ngFor="let user of usuarios">
+  <li>{{user.getNombre()}} es {{user.getSexo()}} y </li>
+  <p *ngIf="user.getIndice()<=18">está demasiado fino(su IMC es de {{user.getIndiceR()}})</p>
+  <p *ngIf="user.getIndice()>18 && user.getIndice()<25">está puta madre(su IMC es de {{user.getIndiceR()}})</p>
+  <p *ngIf="user.getIndice()>=25 && user.getIndice()<30">está gordo(su IMC es de {{user.getIndiceR()}})</p>
+  <p *ngIf="user.getIndice()>=30">es Falete(su IMC es de {{user.getIndiceR()}})</p>
+</ul>
+</div>

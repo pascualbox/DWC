@@ -1,0 +1,39 @@
+
+@import url(https://fonts.googleapis.com/css?family=Knewave);
+
+$knewave: "Knewave";
+#mainDiv{
+  font-family: $knewave;
+  //background:url('https://www.dropbox.com/s/7zxkiuyghz7z3ss/black-background.jpg?raw=1');
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  color: rgb(103, 173, 235);
+}
+#radio-sexo{
+  display: flex;
+  color: rgb(103, 173, 235);
+}
+
+.espacio-top{
+  margin-top: 10px;
+}
+
+.espacio-left{
+  margin-left: 5px;
+}
+
+.espacio-bot{
+  margin-bottom: 5px;
+}
+.btn-cambio{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.label{
+  color: red;
+}
+.imc{
+  color: yellow;
+}
